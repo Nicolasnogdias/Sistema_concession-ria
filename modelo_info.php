@@ -28,7 +28,7 @@ $modelo = $stmt->fetch(PDO::FETCH_ASSOC);
         <img src="<?php echo htmlspecialchars($modelo['imagem']); ?>" alt="Imagem do modelo" width="200">
         <p><strong>Ano:</strong> <?php echo htmlspecialchars($modelo['ano']); ?></p>
         <p><strong>Cor:</strong> <?php echo htmlspecialchars($modelo['cor']); ?></p>
-        <p><strong>Preço:</strong> <?php echo htmlspecialchars($modelo['preco']); ?></p>
+        <p><strong>Preço:</strong> R$ <?php echo htmlspecialchars($modelo['preco']); ?></p>
         <p><strong>Motor:</strong> <?php echo htmlspecialchars($modelo['motor']); ?></p>
         <p><strong>Marca:</strong> <?php echo htmlspecialchars($modelo['nome_marca']); ?></p>
         <p><strong>Descrição:</strong> <?php echo htmlspecialchars($modelo['descricao']); ?></p><br><br>
