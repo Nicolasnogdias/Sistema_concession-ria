@@ -53,7 +53,7 @@ $modelos = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <div>
         <img src="<?php echo htmlspecialchars($modelo['imagem']); ?>" alt="Imagem do modelo" width="200">
         <h3><?php echo htmlspecialchars($modelo['nome_modelo']); ?></h3>
-        <p><strong>Preço:</strong> <?php echo htmlspecialchars($modelo['preco']); ?></p>
+        <p><strong>Preço:</strong> R$ <?php echo htmlspecialchars($modelo['preco']); ?></p>
         <p><strong>Motor:</strong> <?php echo htmlspecialchars($modelo['motor']); ?></p>
         <p><strong>Marca:</strong> <?php echo htmlspecialchars($modelo['nome_marca']); ?></p>
         <a href="modelo_info.php?id=<?php echo $modelo['id']; ?>">
