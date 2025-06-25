@@ -1,5 +1,4 @@
 <?php
-
 require_once 'verifica_admin.php';
 require 'conexao_socars.php';
 
@@ -25,11 +24,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $caminho_imagem = 'uploads/' . basename($imagem);
 
 if (move_uploaded_file($_FILES['imagem']['tmp_name'], $caminho_imagem)) {
-    //Inserir no banco de dados
+    
     if (empty($id_marca) || empty($id_categoria)) {
     die("Selecione uma marca e uma categoria válidas.");
 }
-
+    //Inserir no banco de dados
     $sql = "INSERT INTO modelo (nome_modelo, ano, cor, preco, motor, descricao, imagem, id_marca, id_categoria)
             VALUES (:nome_modelo, :ano, :cor, :preco, :motor, :descricao, :imagem, :id_marca, :id_categoria)";
     $stmt = $pdo->prepare($sql);
